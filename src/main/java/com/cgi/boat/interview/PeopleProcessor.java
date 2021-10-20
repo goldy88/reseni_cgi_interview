@@ -22,7 +22,7 @@ class PeopleProcessor {
     static Map<String, List<String>> lastnamesByFirstname(List<Person> people) {
         Map<String, List<String>> result = new HashMap<>();
         for (Person p : people) {
-            if (result.containsKey(p.getFirstName()) == false) {
+            if (!result.containsKey(p.getFirstName())) {
                 result.put(p.getFirstName(), new ArrayList<String>());
             }
         }
@@ -51,7 +51,7 @@ class PeopleProcessor {
 
         Map<String, List<String>> result = new HashMap<>();
         for (Person p : people) {
-            if (result.containsKey(p.getLastName()) == false) {
+            if (!result.containsKey(p.getLastName())) {
                 result.put(p.getLastName(), new ArrayList<String>());
             }
         }

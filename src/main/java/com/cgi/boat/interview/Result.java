@@ -12,11 +12,11 @@ public class Result {
 
     @Override
     public String toString() {
-        String result = new String();
+        StringBuilder result = new StringBuilder();
         for (int i = 0; i < 3; i++) {
-            result += items[i].toString() + "\n";
+            result.append(items[i].toString()).append("\n");
         }
-        return result;
+        return result.toString();
     }
 
     public void newValue(ResultItem value){
