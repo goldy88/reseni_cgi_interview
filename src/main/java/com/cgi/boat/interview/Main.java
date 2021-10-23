@@ -18,10 +18,10 @@ public class Main {
         // Bart: 21
         // William: 3
 
-        Result res = new Result();
+        Result res = new Result();              // vytvori objekt tridy Result zpracovavajácí data
 
-        for (String key : lastByFirst.keySet()) {
-            res.newValue(new ResultItem(key, lastByFirst.get(key).size()));
+        for (String key : lastByFirst.keySet()) {                       //prochazí seznam příjmení podle jmen
+            res.newValue(new ResultItem(key, lastByFirst.get(key).size())); //
         }
         System.out.println("3 most common first names along with number of occurrences: \n"+res.toString());
 

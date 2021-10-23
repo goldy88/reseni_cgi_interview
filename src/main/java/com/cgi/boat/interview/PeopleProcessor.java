@@ -19,7 +19,7 @@ class PeopleProcessor {
      * "Peter" -> ["Doe"]
      * }
      */
-    static Map<String, List<String>> lastnamesByFirstname(List<Person> people) {
+    static Map<String, List<String>> lastnamesByFirstname(List<Person> people) {    //vytvořil jsem pomocí mapy(klíč hodnota)
         Map<String, List<String>> result = new HashMap<>();
         for (Person p : people) {
             if (!result.containsKey(p.getFirstName())) {
@@ -56,7 +56,7 @@ class PeopleProcessor {
             }
         }
 
-        for (Person p : people) {
+        for (Person p : people) {                   //prochazim objekt typu Person s promenou p v kolekci people
             result.get(p.getLastName()).add(p.getLastName());
         }
 
